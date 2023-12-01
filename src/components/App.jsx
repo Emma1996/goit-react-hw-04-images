@@ -81,9 +81,11 @@ const App = () => {
         <>
           <ImageGallery images={images} onImageClick={handleImageClick} />
           {images.length > 0 && (
-            <Button onClick={fetchMoreImages} disabled={isLoading}>
-              Load More
-            </Button>
+            <Button
+              label="Load More"
+              onClick={fetchMoreImages}
+              disabled={isLoading}
+            />
           )}
           <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
             <img src={modalImageUrl} alt="Modal" style={{ width: '100%' }} />
