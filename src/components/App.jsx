@@ -16,6 +16,8 @@ const App = () => {
   const [page, setPage] = useState(1);
 
   const handleSearch = async term => {
+    setSearchTerm(term);
+
     const apiKey = '39759882-73fa965e3ac5dd440dc8af6ef';
     const apiUrl = `https://pixabay.com/api/?q=${term}&page=1&key=${apiKey}&image_type=photo&orientation=horizontal&per_page=12`;
 
